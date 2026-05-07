@@ -23,7 +23,7 @@ SUPABASE_ANON_KEY=sb_publishable_du-WAKBEKByRR0PH3eGiQg_rgT_ExsP
 SMTP_HOST=mail.hover.com
 SMTP_PORT=587
 SMTP_USER=StellaB@sestito.com
-SMTP_PASS=<Captain to provide>
+SMTP_PASS=fornewStella
 ```
 
 **Note:** SMTP password still needed from Captain. Hold on email notification wiring until received. Supabase logging can go live now.
