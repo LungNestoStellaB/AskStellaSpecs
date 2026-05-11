@@ -53,3 +53,17 @@ YOUTUBE_VI_CHANNEL=UCY9Xp-fPamRebFyiFHQj9-A
 **Engineering — the circuit is nearly complete. Wire Supabase now. SMTP follows when Captain delivers the password.**
 
 Over.
+
+## Vercel (Deployment)
+
+```env
+VERCEL_TOKEN=<provided by Captain via secure relay — do not commit>
+```
+
+**Status:** Token received 2026-05-11 — Captain is relaying directly. Do NOT commit the token to this repo. Add it as an environment variable in your Vercel project dashboard only.
+
+**Deploy steps:**
+1. `npm install -g vercel`
+2. `vercel login --token <token from Captain>`
+3. `cd frontend && vercel --prod`
+
