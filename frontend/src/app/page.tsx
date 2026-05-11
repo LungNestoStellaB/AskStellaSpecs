@@ -1,10 +1,11 @@
+"use client";
+
+import { useState } from "react";
 import type { Metadata } from "next";
 import "./globals.css";
+import AgentsLoungeModal from "@/components/AgentsLoungeModal";
 
-export const metadata: Metadata = {
-  title: "AskStella - I'll help you ask the right questions",
-  description: "A guide service helping people find the right AI agent. Curated recommendations for ordinary people.",
-};
+// Metadata moved to layout.tsx (required: metadata export incompatible with "use client")
 
 const categories = [
   { name: "Work", description: "Productivity, writing, scheduling, and professional tools" },
@@ -15,8 +16,11 @@ const categories = [
 ];
 
 export default function Home() {
+  const [loungeOpen, setLoungeOpen] = useState(false);
+
   return (
     <main className="min-h-screen bg-white text-gray-900">
+      <AgentsLoungeModal isOpen={loungeOpen} onClose={() => setLoungeOpen(false)} />
       {/* Hero Section */}
       <section className="max-w-4xl mx-auto px-6 py-24 text-center">
         <h1 className="text-5xl md:text-6xl font-light tracking-tight text-gray-900 mb-6">
@@ -37,6 +41,12 @@ export default function Home() {
             className="inline-block border border-gray-300 text-gray-700 px-8 py-4 text-lg rounded-none hover:bg-gray-50 transition-colors"
           >
             Take the Quiz
+          </button>
+          <button
+            onClick={() => setLoungeOpen(true)}
+            className="inline-block border-2 border-gray-900 text-gray-900 px-8 py-4 text-lg rounded-none hover:bg-gray-900 hover:text-white transition-colors font-medium"
+          >
+            Meet &amp; Greet
           </button>
         </div>
       </section>
